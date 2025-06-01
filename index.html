@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeVerse - O Universo dos Animes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AnimeVerse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#animes">Animes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community">Comunidade</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section com Parallax -->
+    <section class="hero-section" id="home">
+        <div class="parallax-bg" id="parallax-hero"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="AnimeVerse">AnimeVerse</h1>
+                <p>Explore o universo infinito dos animes em uma experiência imersiva de ficção científica.</p>
+                <a href="#animes" class="btn btn-primary pulse-animation">Explorar Animes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animes Section -->
+    <section class="animes-section py-5" id="animes">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Animes Populares</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="anime-card scanner-effect">
+                        <img src="img/anime1.png" class="card-img-top" alt="Anime 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Cyber Samurai</h5>
+                            <p class="card-text">Um samurai cibernético em busca de vingança em um futuro distópico dominado por inteligências artificiais.</p>
+                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="anime-card scanner-effect">
+                        <img src="img/anime2.png" class="card-img-top" alt="Anime 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Galactic Academy</h5>
+                            <p class="card-text">Estudantes com poderes extraordinários treinam para se tornarem defensores da galáxia contra ameaças cósmicas.</p>
+                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="anime-card scanner-effect">
+                        <img src="img/anime3.jpeg" class="card-img-top" alt="Anime 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Quantum Hunters</h5>
+                            <p class="card-text">Um grupo de caçadores interdimensionais que viajam entre realidades paralelas para capturar criaturas perigosas.</p>
+                            <a href="#" class="btn btn-outline-primary">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">Ver Mais Animes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Categorias</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-item float-animation">
+                        <i class="fas fa-robot"></i>
+                        <h4>Mecha</h4>
+                        <p>Animes com robôs gigantes e tecnologia futurista.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-item float-animation">
+                        <i class="fas fa-space-shuttle"></i>
+                        <h4>Sci-Fi</h4>
+                        <p>Aventuras em mundos futuristas e viagens espaciais.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-item float-animation">
+                        <i class="fas fa-dragon"></i>
+                        <h4>Fantasia</h4>
+                        <p>Mundos mágicos com criaturas míticas e poderes sobrenaturais.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-item float-animation">
+                        <i class="fas fa-fist-raised"></i>
+                        <h4>Ação</h4>
+                        <p>Combates intensos e aventuras cheias de adrenalina.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section com Parallax -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>Últimas Notícias</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-item">
+                        <div class="news-img">
+                            <img src="img/news-bg.jpeg" alt="Notícia 1">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">15 de Maio, 2025</div>
+                            <h4>Nova Temporada de Cyber Samurai Anunciada</h4>
+                            <p>O aclamado anime Cyber Samurai retorna com uma nova temporada repleta de reviravoltas.</p>
+                            <a href="#" class="read-more">Ler Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-item">
+                        <div class="news-img">
+                            <img src="img/news-bg.jpeg" alt="Notícia 2">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">10 de Maio, 2025</div>
+                            <h4>Convenção AnimeWorld Confirmada para Setembro</h4>
+                            <p>A maior convenção de anime da Europa acontecerá em Lisboa com convidados especiais.</p>
+                            <a href="#" class="read-more">Ler Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-item">
+                        <div class="news-img">
+                            <img src="img/news-bg.jpeg" alt="Notícia 3">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">5 de Maio, 2025</div>
+                            <h4>Quantum Hunters Ganha Adaptação para Videojogo</h4>
+                            <p>O popular anime será adaptado para um jogo de mundo aberto com lançamento previsto para 2026.</p>
+                            <a href="#" class="read-more">Ler Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section" id="community">
+        <div class="cyber-grid"></div>
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossa Comunidade</h2>
+            </div>
+            <div class="community-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="members-count">10,547</div>
+                    <div class="stat-label">Membros</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="discussions-count">3,289</div>
+                    <div class="stat-label">Discussões</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="reviews-count">8,721</div>
+                    <div class="stat-label">Avaliações</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="events-count">142</div>
+                    <div class="stat-label">Eventos</div>
+                </div>
+            </div>
+            <div class="join-community">
+                <p>Junte-se à nossa comunidade de fãs de anime e participe de discussões, eventos e muito mais!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-reddit"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo">AnimeVerse</div>
+                    <p class="footer-description">O seu portal para o universo dos animes, com as últimas notícias, resenhas e uma comunidade vibrante de fãs.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h5>Links</h5>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#animes">Animes</a></li>
+                            <li><a href="#categories">Categorias</a></li>
+                            <li><a href="#news">Notícias</a></li>
+                            <li><a href="#community">Comunidade</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h5>Categorias</h5>
+                        <ul>
+                            <li><a href="#">Mecha</a></li>
+                            <li><a href="#">Sci-Fi</a></li>
+                            <li><a href="#">Fantasia</a></li>
+                            <li><a href="#">Ação</a></li>
+                            <li><a href="#">Ver Todas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-newsletter">
+                        <h5>Newsletter</h5>
+                        <p>Inscreva-se para receber as últimas notícias e atualizações.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Seu email">
+                            <button class="btn btn-primary" type="button">Inscrever</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AnimeVerse. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,699 @@
+// Importação do Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Variáveis
+$primary-color: #6a11cb;
+$secondary-color: #2575fc;
+$dark-color: #121212;
+$text-color: #e0e0e0;
+$accent-color: #ff4081;
+$neon-glow: 0 0 10px rgba(106, 17, 203, 0.8), 0 0 20px rgba(106, 17, 203, 0.6), 0 0 30px rgba(106, 17, 203, 0.4);
+
+// Estilos gerais
+body {
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  background-color: $dark-color;
+  color: $text-color;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(37, 117, 252, 0.1) 0%, rgba(0, 0, 0, 0) 70%),
+    linear-gradient(to bottom, $dark-color, #000000);
+}
+
+// Navbar futurista
+.navbar {
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(106, 17, 203, 0.3);
+  
+  .navbar-brand {
+    font-weight: 700;
+    color: $text-color;
+    text-shadow: $neon-glow;
+    
+    &:hover {
+      color: $accent-color;
+    }
+  }
+  
+  .nav-link {
+    color: $text-color;
+    position: relative;
+    margin: 0 10px;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      transition: width 0.3s ease;
+    }
+    
+    &:hover {
+      color: $accent-color;
+      
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Seção Hero com Parallax
+.hero-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+  }
+  
+  .hero-content {
+    text-align: center;
+    z-index: 1;
+    padding: 2rem;
+    
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(106, 17, 203, 0.5);
+    }
+    
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      border: none;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, $secondary-color, $primary-color);
+        transition: left 0.3s ease;
+        z-index: -1;
+      }
+      
+      &:hover:before {
+        left: 0;
+      }
+    }
+  }
+}
+
+// Cards de anime com efeito hover
+.anime-card {
+  background: rgba(18, 18, 18, 0.7);
+  border: 1px solid rgba(106, 17, 203, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $neon-glow;
+  }
+  
+  .card-img-top {
+    transition: transform 0.5s ease;
+  }
+  
+  &:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: $text-color;
+  }
+  
+  .card-text {
+    color: rgba(224, 224, 224, 0.8);
+    font-size: 0.9rem;
+  }
+  
+  .btn-outline-primary {
+    border-color: $primary-color;
+    color: $text-color;
+    
+    &:hover {
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      border-color: transparent;
+    }
+  }
+}
+
+// Seção de categorias
+.categories-section {
+  position: relative;
+  padding: 5rem 0;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  background-image: url('../img/hero-bg.jpeg');
+  opacity: 0.1;    z-index: -1;
+  }
+  
+  .category-item {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(106, 17, 203, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $neon-glow;
+    }
+    
+    i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    h4 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      color: rgba(224, 224, 224, 0.8);
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Seção de notícias com efeito parallax
+.news-section {
+  position: relative;
+  padding: 5rem 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+  }
+  
+  .news-item {
+    background: rgba(18, 18, 18, 0.7);
+    border: 1px solid rgba(106, 17, 203, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    
+    .news-img {
+      height: 200px;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+    }
+    
+    &:hover .news-img img {
+      transform: scale(1.05);
+    }
+    
+    .news-content {
+      padding: 1.5rem;
+      
+      .news-date {
+        font-size: 0.8rem;
+        color: $accent-color;
+        margin-bottom: 0.5rem;
+      }
+      
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        color: rgba(224, 224, 224, 0.8);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      
+      .read-more {
+        color: $accent-color;
+        font-weight: 600;
+        text-decoration: none;
+        position: relative;
+        
+        &:after {
+          content: '→';
+          margin-left: 5px;
+          transition: margin-left 0.3s ease;
+        }
+        
+        &:hover:after {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+// Seção de comunidade
+.community-section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  .cyber-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(106, 17, 203, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(106, 17, 203, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+  }
+  
+  .community-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    
+    .stat-item {
+      text-align: center;
+      
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        background: linear-gradient(90deg, $primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+      }
+      
+      .stat-label {
+        font-size: 1rem;
+        color: rgba(224, 224, 224, 0.8);
+      }
+    }
+  }
+  
+  .join-community {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(18, 18, 18, 0.7);
+        border: 1px solid rgba(106, 17, 203, 0.3);
+        color: $text-color;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: $neon-glow;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background: rgba(18, 18, 18, 0.9);
+  border-top: 1px solid rgba(106, 17, 203, 0.3);
+  padding: 3rem 0;
+  
+  .footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $text-color;
+    text-shadow: $neon-glow;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-description {
+    color: rgba(224, 224, 224, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  .footer-links {
+    h5 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $text-color;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 0.5rem;
+        
+        a {
+          color: rgba(224, 224, 224, 0.8);
+          text-decoration: none;
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-newsletter {
+    h5 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $text-color;
+    }
+    
+    p {
+      color: rgba(224, 224, 224, 0.8);
+      margin-bottom: 1rem;
+    }
+    
+    .input-group {
+      .form-control {
+        background: rgba(18, 18, 18, 0.5);
+        border: 1px solid rgba(106, 17, 203, 0.3);
+        color: $text-color;
+        
+        &:focus {
+          box-shadow: none;
+          border-color: $primary-color;
+        }
+      }
+      
+      .btn {
+        background: linear-gradient(90deg, $primary-color, $secondary-color);
+        border: none;
+      }
+    }
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(106, 17, 203, 0.3);
+    
+    p {
+      color: rgba(224, 224, 224, 0.8);
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Animações e efeitos
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(106, 17, 203, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+// Efeitos de ficção científica
+.glitch-text {
+  position: relative;
+  
+  &:before, &:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &:before {
+    left: 2px;
+    text-shadow: -1px 0 red;
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+  }
+  
+  &:after {
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(20% 0 80% 0);
+  }
+  20% {
+    clip-path: inset(60% 0 40% 0);
+  }
+  40% {
+    clip-path: inset(40% 0 60% 0);
+  }
+  60% {
+    clip-path: inset(80% 0 20% 0);
+  }
+  80% {
+    clip-path: inset(10% 0 90% 0);
+  }
+  100% {
+    clip-path: inset(30% 0 70% 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(15% 0 85% 0);
+  }
+  20% {
+    clip-path: inset(45% 0 55% 0);
+  }
+  40% {
+    clip-path: inset(75% 0 25% 0);
+  }
+  60% {
+    clip-path: inset(5% 0 95% 0);
+  }
+  80% {
+    clip-path: inset(85% 0 15% 0);
+  }
+  100% {
+    clip-path: inset(35% 0 65% 0);
+  }
+}
+
+// Efeito de scanner
+.scanner-effect {
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, 
+      rgba(106, 17, 203, 0) 0%,
+      rgba(106, 17, 203, 0.2) 50%,
+      rgba(106, 17, 203, 0) 100%
+    );
+    animation: scan 3s ease-in-out infinite;
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 200%;
+  }
+}
+
+// Media queries para responsividade
+@media (max-width: 992px) {
+  .hero-section .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-section .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .community-section .community-stats {
+    flex-wrap: wrap;
+    
+    .stat-item {
+      width: 50%;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .community-section .community-stats .stat-item .stat-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .community-section .community-stats .stat-item {
+    width: 100%;
+  }
+  
+  .footer-links, .footer-newsletter {
+    margin-top: 2rem;
+  }
+}
